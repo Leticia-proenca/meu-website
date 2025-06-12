@@ -1,0 +1,229 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* cores */
+:root {
+    --roxo-principal: #8B5CF6;
+    --roxo-escuro: #6D28D9;
+    --roxo-claro: #A78BFA;
+    --preto: #1F2937;
+    --preto-claro: #374151;
+    --branco: #FFFFFF;
+    --cinza-claro: #F9FAFB;
+}
+
+/* estilo */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: var(--preto);
+    background: linear-gradient(135deg, var(--branco) 0%, var(--cinza-claro) 100%);
+    min-height: 100vh;
+}
+
+/* main container */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+    background: var(--branco);
+    margin-bottom: 2rem;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(139, 92, 246, 0.1);
+    border: 1px solid rgba(139, 92, 246, 0.1);
+}
+
+/* intro */
+#divMeuPortfolio {
+    background: linear-gradient(135deg, var(--roxo-principal) 0%, var(--roxo-escuro) 100%);
+    color: var(--branco);
+    text-align: center;
+    margin-bottom: 3rem;
+    padding: 3rem 2rem;
+}
+
+#divMeuPortfolio h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+#divMeuPortfolio p {
+    font-size: 1.2rem;
+    opacity: 0.9;
+    max-width: 800px;
+    margin: 0 auto 1rem auto;
+}
+
+/* main section */
+section {
+    margin-bottom: 3rem;
+}
+
+/* titulos - materias */
+section > div > h1 {
+    color: var(--roxo-escuro);
+    font-size: 2.2rem;
+    margin-bottom: 2rem;
+    text-align: center;
+    position: relative;
+    padding-bottom: 1rem;
+}
+
+section > div > h1::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100px;
+    height: 3px;
+    background: linear-gradient(90deg, var(--roxo-principal), var(--roxo-claro));
+    border-radius: 2px;
+}
+
+/* projetos */
+.container div[id] {
+    background: var(--branco);
+    border-left: 5px solid var(--roxo-principal);
+    padding: 2rem;
+    margin-bottom: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(139, 92, 246, 0.08);
+}
+
+/* titulo - projeto */
+.container div[id] h1 {
+    color: var(--roxo-escuro);
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+    border-bottom: 2px solid var(--roxo-claro);
+    padding-bottom: 0.5rem;
+    display: inline-block;
+}
+
+.container div[id] h2 {
+    color: var(--roxo-principal);
+    font-size: 1.4rem;
+    margin: 1.5rem 0 1rem 0;
+}
+
+/* paragrafos */
+p {
+    margin-bottom: 1rem;
+    text-align: justify;
+    color: var(--preto-claro);
+    font-size: 1.1rem;
+}
+
+/* bullet points */
+p:contains("•") {
+    margin-left: 1rem;
+}
+
+/* shaders container */
+#expCria .container {
+    border-left-color: var(--roxo-principal);
+}
+
+#RA .container {
+    border-left-color: var(--roxo-escuro);
+}
+
+#logica .container {
+    border-left-color: var(--roxo-claro);
+}
+
+#ciberfisico .container {
+    border-left-color: var(--roxo-principal);
+}
+
+/* responsividade */
+@media (max-width: 768px) {
+    .container {
+        padding: 1.5rem;
+        margin-bottom: 1.5rem;
+    }
+    
+    #divMeuPortfolio h1 {
+        font-size: 2rem;
+    }
+    
+    section > div > h1 {
+        font-size: 1.8rem;
+    }
+    
+    .container div[id] h1 {
+        font-size: 1.5rem;
+    }
+    
+    p {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    body {
+        padding: 1rem;
+    }
+    
+    .container {
+        padding: 1rem;
+    }
+    
+    #divMeuPortfolio {
+        padding: 2rem 1rem;
+    }
+    
+    #divMeuPortfolio h1 {
+        font-size: 1.8rem;
+    }
+}
+
+/* Animações suaves */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.container {
+    animation: fadeInUp 0.6s ease-out;
+}
+
+/* Efeito de hover nos links (se houver) */
+a {
+    color: var(--roxo-principal);
+    text-decoration: none;
+}
+
+a:hover {
+    color: var(--roxo-escuro);
+    text-decoration: underline;
+}
+
+/* scroll */
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--cinza-claro);
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--roxo-principal);
+    border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--roxo-escuro);
+}
