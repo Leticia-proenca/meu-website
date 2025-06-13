@@ -183,33 +183,6 @@ p:contains("•") {
     }
 }
 
-/* Animações suaves */
-@keyframes fadeInUp {
-    from {
-        opacity: 0;
-        transform: translateY(30px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-.container {
-    animation: fadeInUp 0.6s ease-out;
-}
-
-/* Efeito de hover nos links (se houver) */
-a {
-    color: var(--roxo-principal);
-    text-decoration: none;
-}
-
-a:hover {
-    color: var(--roxo-escuro);
-    text-decoration: underline;
-}
-
 /* scroll */
 ::-webkit-scrollbar {
     width: 10px;
@@ -226,4 +199,99 @@ a:hover {
 
 ::-webkit-scrollbar-thumb:hover {
     background: var(--roxo-escuro);
+}
+
+/* imagens */
+img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 8px 25px rgba(139, 92, 246, 0.15);
+    border: 2px solid transparent;
+    margin: 1rem 0;
+}
+
+/* singleImage */
+.singleImage {
+    display: block;
+    margin: 1.5rem auto;
+    max-width: 600px;
+    width: 90%;
+}
+
+/* smallImage */
+.smallImage {
+    flex: 1;
+    min-width: 250px;
+    max-width: 300px;
+}
+
+/* galerias */
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin: 1.5rem 0;
+    justify-content: center;
+}
+
+/* imagen de cada projeto */
+#idleRacer img {
+    display: block;
+    margin: 1.5rem auto;
+    max-width: 500px;
+    width: 85%;
+    justify-items: center;
+}
+
+#eventy .gallery {
+    display: grid;
+    gap: 1.5rem;
+    margin: 2rem 0;
+    justify-items: center;
+}
+
+#eventy img {
+    width: 100%;
+    margin: 0;
+}
+
+#oraculo img {
+    display: block;
+    margin: 1.5rem auto;
+    max-width: 400px;
+    width: 75%;
+}
+
+#jogoForca .image-gallery {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+#jogoForca img {
+    flex: 1;
+    min-width: 200px;
+    max-width: 250px;
+    margin: 0;
+}
+
+#detetive .image-gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1rem;
+    margin: 2rem 0;
+}
+
+#detetive img {
+    width: 100%;
+    margin: 0;
+}
+
+#semaforo img {
+    display: block;
+    margin: 1.5rem auto;
+    max-width: 450px;
+    width: 80%;
 }
